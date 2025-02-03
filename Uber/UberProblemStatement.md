@@ -8,7 +8,7 @@ As a newly hired Data Scientist in Uber's New York Office, you have been given t
 # Objective
 To extract actionable insights around demand patterns across various factors.
 
-Key Questions
+### Key Questions
 What are the different variables that influence pickups?
 
 Which factor affects the pickups the most? What could be plausible reasons for that?
