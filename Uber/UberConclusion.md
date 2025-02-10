@@ -6,6 +6,7 @@
  - Day of the week influenced the number of pickups with Saturday being the day with the most, and Monday being the day with the least. 
  ![AVG Pickups By Week Day](Plots\AVG_pickups_by_weekday.png)
 
+- The demand for Uber cabs steadily increases as it goes from Jan to June.
 
 #### Which factor affects the pickups the most? What could be plausible reasons for that?
 
