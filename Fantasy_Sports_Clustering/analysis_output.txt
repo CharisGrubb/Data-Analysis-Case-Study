@@ -1,0 +1,17 @@
+Rows/Columns: 476/13 
+Duplicate summary: 0
+Number of NULLs per Column:
+ Player_Name       0
+Club              0
+Position          0
+Goals_Scored      0
+Assists           0
+Total_Points      0
+Minutes           0
+Goals_Conceded    0
+Creativity        0
+Influence         0
+Threat            0
+Bonus             0
+Clean_Sheets      0
+dtype: int64 
