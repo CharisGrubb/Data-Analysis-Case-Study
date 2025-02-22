@@ -39,7 +39,41 @@ class Plotter_Helper:
         plt.ylabel(y if y_label is None else y_label)
         plt.xlabel(x if x_label is None else x_label)
         plt.savefig(save_path)
-    
+
+    @classmethod
+    def barplot(cls, data, feature, save_path, perc=False, top_n = None):
+        total = len(data[feature])
+        count = data[feature].nunique()
+        f = (count+1,5) if top_n is None else (top_n+1,5)
+        plt.figure(figsize=f)
+        
+        plt.xticks(rotation=90, fontsize=15)
+        ax = sns.countplot(
+                            data = data,
+                            x = feature,
+                            palette = "Paired",
+                            order = data[feature].value_counts().index[:top_n].sort_values(),
+                            )
+        for p in ax.patches:
+           
+            label = "{:.1f}%".format(100 * p.get_height() / total)  if perc else p.get_height() 
+                                    
+            x = p.get_x() + p.get_width() / 2  # Width of the plot
+            y = p.get_height()                 # Height of the plot
+
+            ax.annotate(
+                label,
+                (x, y),
+                ha = "center",
+                va = "center",
+                size = 12,
+                xytext = (0, 5),
+                textcoords = "offset points",
+            )  # Annotate the percentage
+        plt.savefig(save_path)
+
+
+        
     @classmethod
     def sub_plots(cls, nrows = 2,  gridspec_kw = {"height_ratios": (.25, .75)}
                   , figsize = (15,10)):
