@@ -10,3 +10,19 @@ class Cluster_Helper:
     @classmethod 
     def scaler(cls):
         pass
+
+    @classmethod 
+    def PCA(cls):
+        pass
+
+    @classmethod 
+    def k_means_clustering(cls):
+        pass
+
+    @classmethod 
+    def gaussian_mix_clustering(cls):
+        pass
+
+    @classmethod
+    def get_silhouette_score(cls):
+        pass
