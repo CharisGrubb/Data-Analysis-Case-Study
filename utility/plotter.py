@@ -15,6 +15,7 @@ class Plotter_Helper:
         ax_hist.axvline(x.mean(), color='g', linestyle='--')      # Add mean to the histogram
         ax_hist.axvline(x.median(), color='black', linestyle='-') # Add median to the histogram
 
+        ax_hist = cls.add_annotation(ax_hist)
         
         plt.savefig(save_path)
 
@@ -86,3 +87,23 @@ class Plotter_Helper:
         figsize = figsize)
 
         return f, ax_box, ax_hist
+    
+    @classmethod 
+    def add_annotation(cls, ax):
+        for p in ax.patches:
+           
+            label = p.get_height() 
+            if label > 0:                         
+                x = p.get_x() + p.get_width() / 2  # Width of the plot
+                y = p.get_height()                 # Height of the plot
+
+                ax.annotate(
+                    label,
+                    (x, y),
+                    ha = "center",
+                    va = "center",
+                    size = 12,
+                    xytext = (0, 5),
+                    textcoords = "offset points",
+                )  # Annotate the percentage
+        return ax
