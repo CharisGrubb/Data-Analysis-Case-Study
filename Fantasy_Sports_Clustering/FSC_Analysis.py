@@ -34,7 +34,8 @@ def analyze():
            
             if data_copy[col].dtype in ['int64','float64']:
                 plotter.Plotter_Helper.box_hist_plot(x= data_copy[col],save_path=f"Fantasy_Sports_Clustering\\Plots\\histoboxplot_{col}.png")
-
+            elif data_copy[col].dtype in ['str', 'object']:
+                plotter.Plotter_Helper.barplot(data_copy, col, save_path = f"Fantasy_Sports_Clustering\\Plots\\barplot_{col}.png")
         
         
         
