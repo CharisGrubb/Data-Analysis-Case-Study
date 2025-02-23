@@ -26,7 +26,8 @@ class Plotter_Helper:
         sns.heatmap(coor_df, annot = annot, cmap = cmap,            
         fmt = fmt,            
         xticklabels = coor_df.columns,            
-        yticklabels = coor_df.columns)
+        yticklabels = coor_df.columns
+        )
 
         plt.savefig(save_path)
 
@@ -73,7 +74,7 @@ class Plotter_Helper:
         plt.savefig(save_path)
 
 
-        
+
     @classmethod
     def sub_plots(cls, nrows = 2,  gridspec_kw = {"height_ratios": (.25, .75)}
                   , figsize = (15,10)):

@@ -28,16 +28,18 @@ def analyze():
                 print("Add logic to fix null data-", data_nulls.index[i])
                 file.write("Fixing NULL data at " + data_nulls.index[i])
 
-        
+        num_list=[]
         #Univariate Analysis
         for col in data_copy.columns:
            
             if data_copy[col].dtype in ['int64','float64']:
+                num_list.append(col)
                 plotter.Plotter_Helper.box_hist_plot(x= data_copy[col],save_path=f"Fantasy_Sports_Clustering\\Plots\\histoboxplot_{col}.png")
             elif data_copy[col].dtype in ['str', 'object']:
                 plotter.Plotter_Helper.barplot(data_copy, col, save_path = f"Fantasy_Sports_Clustering\\Plots\\barplot_{col}.png")
         
         
-        
+        plotter.Plotter_Helper.heatmapper(data_copy[num_list].corr(numeric_only=True)
+                                          ,save_path="Fantasy_Sports_Clustering\\Plots\\heatmapper.png")
         
         file.close()
