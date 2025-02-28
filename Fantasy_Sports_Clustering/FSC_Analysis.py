@@ -29,6 +29,7 @@ def analyze():
                 file.write("Fixing NULL data at " + data_nulls.index[i])
 
         num_list=[]
+        
         #Univariate Analysis
         for col in data_copy.columns:
            
@@ -39,6 +40,8 @@ def analyze():
                 plotter.Plotter_Helper.barplot(data_copy, col, save_path = f"Fantasy_Sports_Clustering\\Plots\\barplot_{col}.png")
         
         
+
+        #Bivariate Analysis
         plotter.Plotter_Helper.heatmapper(data_copy[num_list].corr(numeric_only=True)
                                           ,save_path="Fantasy_Sports_Clustering\\Plots\\heatmapper.png")
         
