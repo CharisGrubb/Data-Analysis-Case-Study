@@ -6,7 +6,9 @@ TB & Chest disease    0.045780
 surgery               0.010276
 Name: proportion, dtype: float64
 
--------------------Ward_Facility_Code
+--------------------------------------------------
+
+Ward_Facility_Code
 F    0.241076
 D    0.238110
 B    0.207770
@@ -15,7 +17,9 @@ A    0.093102
 C    0.029194
 Name: proportion, dtype: float64
 
--------------------doctor_name
+--------------------------------------------------
+
+doctor_name
 Dr Sarah     0.199192
 Dr Olivia    0.196704
 Dr Sophia    0.149506
@@ -27,7 +31,9 @@ Dr Isaac     0.006718
 Dr Simon     0.003558
 Name: proportion, dtype: float64
 
--------------------Age
+--------------------------------------------------
+
+Age
 21-30     0.319586
 31-40     0.266746
 41-50     0.160812
@@ -40,25 +46,33 @@ Name: proportion, dtype: float64
 91-100    0.002732
 Name: proportion, dtype: float64
 
--------------------gender
+--------------------------------------------------
+
+gender
 Female    0.74162
 Male      0.20696
 Other     0.05142
 Name: proportion, dtype: float64
 
--------------------Type of Admission
+--------------------------------------------------
+
+Type of Admission
 Trauma       0.621072
 Emergency    0.271568
 Urgent       0.107360
 Name: proportion, dtype: float64
 
--------------------Severity of Illness
+--------------------------------------------------
+
+Severity of Illness
 Moderate    0.560394
 Minor       0.263074
 Extreme     0.176532
 Name: proportion, dtype: float64
 
--------------------health_conditions
+--------------------------------------------------
+
+health_conditions
 Other                  0.271209
 High Blood Pressure    0.228093
 Diabetes               0.211553
@@ -66,9 +80,12 @@ Asthama                0.188198
 Heart disease          0.100947
 Name: proportion, dtype: float64
 
--------------------Insurance
+--------------------------------------------------
+
+Insurance
 Yes    0.78592
 No     0.21408
 Name: proportion, dtype: float64
 
--------------------
+--------------------------------------------------
+

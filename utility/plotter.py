@@ -46,7 +46,7 @@ class Plotter_Helper:
     def barplot(cls, data, feature, save_path, perc=False, top_n = None):
         total = len(data[feature])
         count = data[feature].nunique()
-        f = (count+1,5) if top_n is None else (top_n+1,5)
+        f = (count+1,12) if top_n is None else (top_n+1,10)
         plt.figure(figsize=f)
         
         plt.xticks(rotation=90, fontsize=15)
