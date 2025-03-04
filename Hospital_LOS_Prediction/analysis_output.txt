@@ -1,0 +1,74 @@
+Data shape: (500000, 15)Department
+gynecology            0.686956
+radiotherapy          0.168630
+anesthesia            0.088358
+TB & Chest disease    0.045780
+surgery               0.010276
+Name: proportion, dtype: float64
+
+-------------------Ward_Facility_Code
+F    0.241076
+D    0.238110
+B    0.207770
+E    0.190748
+A    0.093102
+C    0.029194
+Name: proportion, dtype: float64
+
+-------------------doctor_name
+Dr Sarah     0.199192
+Dr Olivia    0.196704
+Dr Sophia    0.149506
+Dr Nathan    0.141554
+Dr Sam       0.111422
+Dr John      0.102526
+Dr Mark      0.088820
+Dr Isaac     0.006718
+Dr Simon     0.003558
+Name: proportion, dtype: float64
+
+-------------------Age
+21-30     0.319586
+31-40     0.266746
+41-50     0.160812
+11-20     0.093072
+61-70     0.053112
+51-60     0.043436
+71-80     0.037406
+81-90     0.016362
+0-10      0.006736
+91-100    0.002732
+Name: proportion, dtype: float64
+
+-------------------gender
+Female    0.74162
+Male      0.20696
+Other     0.05142
+Name: proportion, dtype: float64
+
+-------------------Type of Admission
+Trauma       0.621072
+Emergency    0.271568
+Urgent       0.107360
+Name: proportion, dtype: float64
+
+-------------------Severity of Illness
+Moderate    0.560394
+Minor       0.263074
+Extreme     0.176532
+Name: proportion, dtype: float64
+
+-------------------health_conditions
+Other                  0.271209
+High Blood Pressure    0.228093
+Diabetes               0.211553
+Asthama                0.188198
+Heart disease          0.100947
+Name: proportion, dtype: float64
+
+-------------------Insurance
+Yes    0.78592
+No     0.21408
+Name: proportion, dtype: float64
+
+-------------------
