@@ -25,3 +25,8 @@ def analyze():
             Plotter_Helper.box_hist_plot(data_copy[col],f"Hospital_LOS_Prediction\\Plots\\histBox_{col}.png")
          elif data_copy[col].dtype in ['object']:
             Plotter_Helper.barplot(data_copy, col, f"Hospital_LOS_Prediction\\Plots\\bar_{col}.png")
+
+
+      #Bivariate Analysis
+     
+      Plotter_Helper.heatmapper(data_copy.corr(numeric_only=True),'Hospital_LOS_Prediction\\Plots\\heatmapper.png', figsize=(15,10))
