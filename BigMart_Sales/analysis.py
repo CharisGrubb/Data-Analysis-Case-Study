@@ -22,7 +22,35 @@ def analyze():
         file.write("\n\nPercentage of missing values - TRAIN: \n" + str((train_df.isnull().sum() / train_df.shape[0])*100))
         file.write("\n\nPercentage of missing values - TEST: \n" + str((test_df.isnull().sum() / test_df.shape[0])*100))
 
+        #### UNIVARIATE ANALYSIS ###########
 
+        for col in train_df.columns:
+            if train_df[col].dtype in ['int64','float64']:
+                Plotter_Helper.box_hist_plot(train_df[col],f"BigMart_Sales\\Plots\\histBox_{col}.png")
+            elif train_df[col].dtype in ['object']:
+                Plotter_Helper.barplot(train_df, col, f"BigMart_Sales\\Plots\\bar_{col}.png")
+
+
+
+        ##### BIVARIATE ANALYSIS ###########
+        Plotter_Helper.lineplot(train_df, x='Outlet_Establishment_Year',y='Item_Outlet_Sales'
+                                ,save_path='BigMart_Sales\\Plots\\line_estYear_itemSales.png',estimator='mean')
+
+        # Handle Missing Values
+
+
+        ##### FEATURE ENGINEERING ###########
+
+
+        ##### MODELING ######
+
+            #Encode Categorical variables 
+
+            #Scale Features 
+
+            #Add constant 
+
+            #OLS Modeling 
 
         end_time = datetime.now()
         file.write(f"\n\nEND ANALYSIS: {end_time}" )
