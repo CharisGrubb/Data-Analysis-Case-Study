@@ -74,6 +74,19 @@ class Plotter_Helper:
             )  # Annotate the percentage
         plt.savefig(save_path)
 
+    @classmethod 
+    def countplot(cls, y:str, data, save_path, order = None, hue= None, fig_size=(15,7)):
+        plt.figure(figsize = fig_size)
+        sns.countplot(y = y, data = data, order = order, hue=hue) # Plotting a countplot based on the number of vehicles per brand.
+        plt.savefig(save_path)
+
+
+    @classmethod 
+    def pairplot(cls, data, save_path, kind='reg',plot_kws={'line_kws':{'color': 'red'}}, hue=None, corner=True):
+        
+        sns.pairplot(data, kind=kind, plot_kws=plot_kws, hue=hue, corner=corner)
+        plt.savefig(save_path)
+
 
 
     @classmethod
